@@ -35,6 +35,8 @@
 <body>
 <iframe width="796" height="448" src="https://www.youtube.com/embed/Oj9CzhUyb0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<video tabindex=​"-1" class=​"video-stream html5-main-video" webkit-playsinline playsinline controlslist=​"nodownload" style=​"width:​ 796px;​ height:​ 448px;​ left:​ 0px;​ top:​ 0px;​" src=​"blob:​https:​/​/​www.youtube.com/​a23d436a-bf0d-4174-bda5-7382414ae7bb">​</video>​
+
 <div id="overlay" onclick="off()"></div>
 <div id="overlay2" onclick="off()"></div>
 
@@ -45,6 +47,8 @@
 </div>
 
 <script>
+  v = document.getElementsByTagName('video')[0]
+
 function on() {
   document.getElementById("overlay").style.display = "block";
   document.getElementById("overlay2").style.display = "block";
