@@ -3,6 +3,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+ html,body{
+
+    height: 100%;
+}
+
+iframe{
+    width:60%;
+    height:70%
+
+}
 #overlay {
   position: fixed;
   display: none;
@@ -34,6 +44,9 @@
 </head>
 <body>
 <iframe width="796" height="448" src="https://www.youtube.com/embed/Oj9CzhUyb0U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="796" height="448" src="https://www.youtube.com/embed/Oj9CzhUyb0U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="796" height="448" src="https://www.youtube.com/embed/Oj9CzhUyb0U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="796" height="448" src="https://www.youtube.com/embed/Oj9CzhUyb0U?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <div id="overlay" onclick="off()"></div>
 <div id="overlay2" onclick="off()"></div>
@@ -47,8 +60,6 @@
 <script>
 
 function on() {
-  v = document.getElementsByTagName('video')[0];
-  console.log('working' + v.playbackRate);
   document.getElementById("overlay").style.display = "block";
   document.getElementById("overlay2").style.display = "block";
 }
