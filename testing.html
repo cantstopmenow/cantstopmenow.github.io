@@ -2,7 +2,7 @@
 <html>
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <iframe width="632" height="566" src="https://www.youtube.com/embed/tjrKbTK95gQ?enablejsapi=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <div id="player"></div>
     
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -21,7 +21,9 @@
           width: '640',
           videoId: 'tjrKbTK95gQ',
           playerVars: {
-            'playsinline': 1
+            'playsinline': 1,
+            'autoplay': 1, 
+            'controls': 0 
           },
           events: {
             'onReady': onPlayerReady,
