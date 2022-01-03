@@ -2,7 +2,7 @@
 <html>
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-   <div id="player"></div>
+   <div id="player1"></div>
     <div id="player2"></div>
    <button onclick="start2()">start now</button>
     <script>
@@ -15,23 +15,20 @@
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
-      var playerInfoList = [{id:'player',height:'390',width:'640',videoId:'BIhfkAbqKVo'},{id:'player1',height:'390',width:'640',videoId:'BIhfkAbqKVo'}];
-
-      function onYouTubeIframeAPIReady() {
-        if(typeof playerInfoList === 'undefined')
-           return; 
-
-        for(var i = 0; i < playerInfoList.length;i++) {
-          var curplayer = createPlayer(playerInfoList[i]);
-        }   
-      }
-      function createPlayer(playerInfo) {
-          return new YT.Player(playerInfo.id, {
-             height: playerInfo.height,
-             width: playerInfo.width,
-             videoId: playerInfo.videoId
-          });
-      }
+     var player;
+  var player2;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('player1', {
+      height: '390',
+      width: '640',
+      videoId: 'BIhfkAbqKVo'
+    });
+    player2 = new YT.Player('player2', {
+      height: '390',
+      width: '640',
+      videoId: 'BIhfkAbqKVo'
+    });
+  }
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
