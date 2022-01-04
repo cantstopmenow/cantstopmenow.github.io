@@ -95,7 +95,13 @@ body {
       function stopVideo() {
         player.stopVideo();
       }
-      function start2(){player.unMute(); player.playVideo();};
+      function start2(){ 
+        player.playVideo();
+        player2.playVideo();
+        player3.playVideo();
+        player4.playVideo();
+        console.log(player.getCurrentTime() + ', ' + player2.getCurrentTime() + ', ' + player3.getCurrentTime() + ', ' + player4.getCurrentTime());
+      };
     </script>
   </body>
 </html>
