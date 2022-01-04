@@ -28,13 +28,30 @@ body {
   width: 50%;
   height: 50%;
   float: right;
-}    
+}
+ .sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}   
   iframe { 
   display:block; 
   }
     </style>
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
    <div id="player1"></div>
     <div id="player2"></div>
     <div id="player3"></div>
