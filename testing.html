@@ -24,6 +24,11 @@ body {
   height: 50%;
   float: left;
 }
+ #player4 {
+  width: 50%;
+  height: 50%;
+  float: right;
+}    
   iframe { 
   display:block; 
   }
@@ -33,6 +38,7 @@ body {
    <div id="player1"></div>
     <div id="player2"></div>
     <div id="player3"></div>
+    <div id="player4"></div>
    <button onclick="start2()">start now</button>
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -47,6 +53,7 @@ body {
      var player;
   var player2;
       var player3;
+       var player4;  
   function onYouTubePlayerAPIReady() {
     player = new YT.Player('player1', {
       height: '390',
@@ -59,6 +66,11 @@ body {
       videoId: 'BIhfkAbqKVo'
     });
     player3 = new YT.Player('player3', {
+      height: '390',
+      width: '640',
+      videoId: 'BIhfkAbqKVo'
+    });
+    player4 = new YT.Player('player3', {
       height: '390',
       width: '640',
       videoId: 'BIhfkAbqKVo'
