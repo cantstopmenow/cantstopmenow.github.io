@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#player1 {
+  width: 45%;
+  height: 50%;
+  float: left;
+}
+ 
+#player2 {
+  width: 45%;
+  height: 50%;
+  float: right;
+} 
+    #player3 {
+  width: 45%;
+  height: 50%;
+  float: left;
+}
+ #player4 {
+  width: 45%;
+  height: 50%;
+  float: right;
+}
+ .sidenav {
+  height: 100%;
+  width: 10%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+    float: left;
+}
+ .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size:2vw;
+  color: #818181;
+  display: block;
+}
+  button {
+    padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size:2vw;
+  display: block;
+}
+  button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}  
+ .sidenav a:hover {
+  color: #f1f1f1;
+}   
+  iframe { 
+  display:block;
+    width: 100vw; 
+    height: 56.25vw;
+  }
+    </style>
+  <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+       <button onclick="start2()">start now</button>
+      <button onclick="stop2()">pause now</button>
+      <button onclick="sync2()">sync now</button>
+</div>
+   <div id="player1"></div>
+    <div id="player2"></div>
+    <div id="player3"></div>
+    <div id="player4"></div>
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+     var player;
+  var player2;
+      var player3;
+       var player4;  
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('player1', {
+      height: '390',
+      width: '640',
+      videoId: 'oqTyBFhdjYw'
+    });
+    player2 = new YT.Player('player2', {
+      height: '390',
+      width: '640',
+      videoId: 'NrFozqFnfjQ'
+    });
+    player3 = new YT.Player('player3', {
+      height: '390',
+      width: '640',
+      videoId: 'Tsie5uyiqE8'
+    });
+    player4 = new YT.Player('player4', {
+      height: '390',
+      width: '640',
+      videoId: 'uMcz7uZt0wE'
+    });
+  }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+      function start2(){ 
+        player.playVideo();
+        player2.playVideo();
+        player3.playVideo();
+        player4.playVideo();
+        console.log(player.getCurrentTime() + ', ' + player2.getCurrentTime() + ', ' + player3.getCurrentTime() + ', ' + player4.getCurrentTime());
+      };
+       function stop2(){ 
+        player.pauseVideo();
+        player2.pauseVideo();
+        player3.pauseVideo();
+        player4.pauseVideo();
+        console.log(player.getCurrentTime() + ', ' + player2.getCurrentTime() + ', ' + player3.getCurrentTime() + ', ' + player4.getCurrentTime());
+      };
+       function sync2(){
+         var c = player.getCurrentTime();
+        player.seekTo(c);
+        player2.seekTo(c + 0.04);
+        player3.seekTo(c + 0.05);
+        player4.seekTo(c + 0.05);
+        console.log(player.getCurrentTime() + ', ' + player2.getCurrentTime() + ', ' + player3.getCurrentTime() + ', ' + player4.getCurrentTime());
+      };
+    </script>
+  </body>
+</html>
