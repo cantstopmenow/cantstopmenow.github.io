@@ -8,33 +8,75 @@ body {
   padding: 0;
   margin: 0;
 }
- .container {
-  position: relative;
+ .container1 {
+  width: 45%;
+  height: 50%;
+  float: left;
   overflow: hidden;
-  width: 90%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 56.25%
+}
+     .container2 {
+  width: 45%;
+  height: 50%;
+  float: right;
+  overflow: hidden;
+  padding-top: 56.25%
+} 
+     .container3 {
+  width: 45%;
+  height: 50%;
+  float: left;
+  overflow: hidden;
+  padding-top: 56.25%    
+} 
+   .container4 {
+  width: 45%;
+  height: 50%;
+  float: right;
+  overflow: hidden;
+  padding-top: 56.25%
 }   
 
 #player1 {
-  width: 50%;
-  height: 50%;
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
  
 #player2 {
-  width: 50%;
-  height: 50%;
-  float: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 } 
     #player3 {
-  width: 50%;
-  height: 50%;
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
  #player4 {
-  width: 50%;
-  height: 50%;
-  float: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
  .sidenav {
   height: 100%;
@@ -82,10 +124,16 @@ body {
       <button onclick="stop2()">pause now</button>
       <button onclick="sync2()">sync now</button>
 </div>
-    <div class="container">
+    <div class="container1">
    <div id="player1"></div>
+      </div>
+    <div class="container2">
     <div id="player2"></div>
+    </div>
+    <div class="container3">
     <div id="player3"></div>
+  </div>
+    <div class="container4">
     <div id="player4"></div>
       </div>
     <script>
