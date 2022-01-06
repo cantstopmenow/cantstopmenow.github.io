@@ -43,49 +43,18 @@ body {
   float:right;
   display:block;
   outline: 0;   
+}
+ .iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }   
 
-#player1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
- 
-#player2 {
-position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-} 
-    #player3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
- #player4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
  .sidenav {
   height: 100%;
   width: 10%;
@@ -133,15 +102,15 @@ position: absolute;
       <button onclick="sync2()">sync now</button>
 </div>
     <div class="container1">
-   <div id="player1"></div>
+   <div id="player1" class="iframe"></div>
       </div>
     <div class="container2">
-    <div id="player2"></div>
+    <div id="player2" class="iframe"></div>
     </div>
-    <div class="container3">
+    <div class="container3" class="iframe">
     <div id="player3"></div>
   </div>
-    <div class="container4">
+    <div class="container4" class="iframe">
     <div id="player4"></div>
       </div>
     <script>
