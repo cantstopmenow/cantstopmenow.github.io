@@ -13,36 +13,9 @@ body {
   width: 45%;
   overflow: hidden;
   padding-top: 25.3125%; /* 16:9 Aspect Ratio */
-  float:left;
+  float:right;
    display:block;
    outline: 0;
-}
-     .container2 {
-  position: relative;
-  width: 45%;
-  overflow: hidden;
-  padding-top: 25.3125%; /* 16:9 Aspect Ratio */
-  float:right;
-   display:block;
-   outline: 0;    
-} 
-     .container3 {
-  position: relative;
-  width: 45%;
-  overflow: hidden;
-  padding-top: 25.3125%; /* 16:9 Aspect Ratio */
-  float:left; 
-   display:block;
-   outline: 0;    
-} 
-   .container4 {
-  position: relative;
-  width: 45%;
-  overflow: hidden;
-  padding-top: 25.3125%; /* 16:9 Aspect Ratio */
-  float:right;
-  display:block;
-  outline: 0;   
 }
  .iframe {
   position: absolute;
@@ -102,16 +75,16 @@ body {
       <button onclick="sync2()">sync now</button>
 </div>
     <div class="container1">
-   <div id="player1" class="iframe"></div>
+   <div id="player2" class="iframe"></div>
       </div>
-    <div class="container2">
-    <div id="player2" class="iframe"></div>
+    <div class="container1">
+    <div id="player1" class="iframe"></div>
     </div>
-    <div class="container3" class="iframe">
-    <div id="player3"></div>
-  </div>
-    <div class="container4" class="iframe">
+    <div class="container1" class="iframe">
     <div id="player4"></div>
+  </div>
+    <div class="container1" class="iframe">
+    <div id="player3"></div>
       </div>
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
