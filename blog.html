@@ -1,124 +1,124 @@
 <!DOCTYPE html>
-<html lang="en-US" class="hide-scroll">
-<head> 
-    <title>Blog</title>
-    <meta name="Keywords">
-    <meta name="Description">
-    
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
 
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
 
-    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
-    <link href="//fonts.googleapis.com/css?family=Roboto|Open+Sans:200,300,400,700,800,900&amp;subset=latin" rel="preload" as="font" />
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
 
-<!--
-<style>.async-hide { opacity: 0 !important} </style>
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
 
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
 
-    <style>
-        .dialog-wrapper {
-            display: none !important;
-        }
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
 
-        .wrap,
-        #main {
-            height: 100vh;
-            margin: 0 !important;
-        }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-        iframe {
-            display: none;
-        }
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
 
-
-        html,
-        body {
-            height: 100%;
-        }
-
-        .page-preview {
-            border-radius: 0;
-            height: 100%;
-        }
-
-        .page-preview-header {
-            background: #f2f2f2;
-            border: none;
-            height: 70px;
-            position: relative;
-            text-align: center;
-        }
-
-        .page-preview-header > a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 4px;
-        }
-
-        .page-preview-header > a:hover {
-            background: #e2f0fc;
-            text-decoration: none;
-        }
-
-        .page-preview-header > a.active {
-            background: #c9e4f9;
-        }
-
-        .page-preview-header > .close {
-            float: right;
-            margin-right: 10px;
-        }
-
-        .page-preview-body {
-            height: calc(100% - 70px);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .page-preview-body iframe {
-            border: none;
-            display: inline-block;
-            height: 100%;
-        }
-    </style>
-
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
 </head>
-    <body>
-        
+<body>
 
-
-<div class="page-preview">
-    <div class="page-preview-header">
-        <a class="hidden-sm hidden-xs" href="#" id="previewDesktopBtn" data-preview-size="100%"><img alt="Responsive Desktop Mode" src="//csite.nicepage.com/Images/Site/responsive-desktop.png"></a>
-        <a class="hidden-sm hidden-xs" href="#" id="previewLaptopBtn" data-preview-size="1040px"><img alt="Responsive Laptop Mode" src="//csite.nicepage.com/Images/Site/responsive-laptop.png"></a>
-        <a class="hidden-xs" href="#" id="previewTabletBtn" data-preview-size="820px"><img alt="Responsive Tablet Mode" src="//csite.nicepage.com/Images/Site/responsive-tablet.png"></a>
-        <a class="hidden-xs" href="#" id="previewPhoneHorizontalBtn" data-preview-size="640px"><img alt="Responsive Phone Horizontal Mode" src="//csite.nicepage.com/Images/Site/responsive-phone-horizontal.png"></a>
-        <a class="hidden-xs" href="#" id="previewPhoneBtn" data-preview-size="440px"><img alt="Responsive Phone Mode" src="//csite.nicepage.com/Images/Site/responsive-phone.png"></a>
-        <a class="close" href="/ht/87416/architecture-design-news-html-template"><img alt="Close" src="//csite.nicepage.com/Images/Site/icon-close.png"></a>
-    </div>
-    <div class="page-preview-body">
-        <iframe id="livePreviewFrame" src="https://website87402.nicepage.io/Page-6.html?version=7d728bd5-7f4a-40d1-9435-f973e4138fc6" width="1057" height="640" style="width:100%;"></iframe>
-    </div>
+<div class="header">
+  <h2>Blog Name</h2>
 </div>
-<a style="position:absolute;top:17px;left:10px;" href="/"><img alt="NicePage.com" src="//csite.nicepage.com/Images/logo-w.png"></a>
 
-        <script>
-            if (window.parent) {
-                var _w = 0, _h = 0;
-                var updateFormSize = function () {
-                    var form = $('form.shaped-form-extended,form.shaped-form');
-                    var w = form.outerWidth(true);
-                    var h = form.outerHeight(true);
-                    if (Math.abs(_w - w) > 5 || Math.abs(_h - h) > 5) {
-                        _w = w;
-                        _h = h;
-                        var msg = { key: 'login-frame-size', width: w, height: h };
-                        window.parent.postMessage(msg, "*");
-                    }
-                    setTimeout(updateFormSize, 300);
-                }
-                updateFormSize();
-            }
-        </script>
-    </body>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
 </html>
