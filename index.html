@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Scuffed Youtube</title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PP58CCD8VF"></script>
 <script>
@@ -81,7 +80,7 @@ footer {
   
 }
 
-.topnav a {
+.topnav a:not(.logo3) {
   float: left;
   display: block;
   color: black;
@@ -89,6 +88,13 @@ footer {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+div.special {
+  float: left;
+  background-color: #757575;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .topnav a:hover {
@@ -101,8 +107,21 @@ footer {
   color: white;
 }
 
+.topnav a.logo {
+  float: left;
+  display: block;
+  color: black;
+ text-align: center;
+  text-decoration: none;
+  
+}
+
 .topnav a.active:hover {
   background-color: #444;
+}
+
+.topnav a.logo:hover {
+  transform: scale(1.5);
 }
 
 .topnav .search-container {
@@ -194,7 +213,13 @@ footer {
 .active:hover {
   background-color: #444;
 }
-  
+  img:not(.logo2) {
+  object-fit: fill;
+}
+
+.logo2{
+  object-fit: fill;
+}
 
 </style>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -245,6 +270,11 @@ footer {
 
 <div class="topnav">
   <a class="active" onclick="openNav()">☰ 🏴‍☠️</a>
+  <div class="special" >
+  <a class="logo3" href="/movie1.html">
+  <img style="object-fit: fill;" class="logo2" src="https://cantstopmenow.github.io/eaeec6c8-34b3-4b4a-a1a2-823e68392063.jpg" alt="Forest" width="120" height="47">
+  </a>
+  </div>
   <a href="/index.html">Home</a>
   <a href="/about.html">About</a>
   <a href="/contact.html">Contact</a>
@@ -282,7 +312,7 @@ function loadImages(numImages = 15){
    let i=0;
     while(i < numImages){
     var tag = document.createElement("div");
-    const link_name = '';
+    const link_name = '/movie1.html';
     const name1 = 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/2becad2345b7214b2bfb77abd74b95089b82a4ed09e38c3ed6aa81e5af47973b._RI_V_TTW_.jpg';
     tag.className = 'gallery';
     tag.innerHTML = `<a href="${link_name}">
