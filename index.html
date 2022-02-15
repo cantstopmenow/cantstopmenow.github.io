@@ -48,6 +48,7 @@ div.gallery {
 div.gallery:hover {
   border: 1px solid #777;
    transform: scale(1.5);
+   overflow: visible;
 }
 
 div.gallery img {
@@ -60,8 +61,10 @@ div.desc {
   text-align: center;
   width: 100%;
   height: 22%;
+  font-size: 95%;
   overflow: hidden;
 }
+
 
 footer {
  position:absolute;
@@ -243,14 +246,6 @@ div.special {
       "COBOL",
       "ColdFusion",
       "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
       "Python",
       "Ruby",
       "Scala",
@@ -317,17 +312,46 @@ function myFunction() {
 
 // get the images
 
+ var pics = [
+      "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/2becad2345b7214b2bfb77abd74b95089b82a4ed09e38c3ed6aa81e5af47973b._RI_V_TTW_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BMTQ3NTg3OTk0OV5BMl5BanBnXkFtZTcwODAwMzU1MQ@@._V1_.jpg",  "https://images.moviesanywhere.com/b892f7421fe0d1ca77461d55306b3309/ff711745-e182-4101-a3a1-368d6bf80cd9.jpg",
+      "https://flxt.tmsimg.com/assets/p173501_p_v10_ab.jpg",
+      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d517ab46-9487-4119-b69c-1c535ecf5938/d2mopd9-050d726d-0df8-434a-be05-9680995faf75.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q1MTdhYjQ2LTk0ODctNDExOS1iNjljLTFjNTM1ZWNmNTkzOFwvZDJtb3BkOS0wNTBkNzI2ZC0wZGY4LTQzNGEtYmUwNS05NjgwOTk1ZmFmNzUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Dinqww2G3NhK0u3SHXH1ApYgqj3kvB7cazhoK04J9Fs",
+      "https://posterspy.com/wp-content/uploads/2018/01/9C6C304E-9ABA-44BD-8B2B-9070691B6B70.jpeg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu1ERXKVJ39zarkQ0Pxkk6-QBuFOiJZlP-lQ&usqp=CAU",
+      "https://m.media-amazon.com/images/I/71z+YNzaEzL._SL1241_.jpg",
+      "https://www.heyuguys.com/images/2011/10/A-Very-Harold-Kumar-3D-Christmas-John-Cho.jpg",
+      "https://www.slashfilm.com/img/gallery/john-cho-says-making-harold-kumar-4-is-possible-but-complicated/l-intro-1638898553.jpg",
+      "https://alternativemovieposters.com/wp-content/uploads/2022/01/Jay-Sean_WhiteCastle.jpg"
+    ]; 
+    
+    function random_item(items)
+{
+  
+return items[Math.floor(Math.random()*items.length)];
+     
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
 function loadImages(numImages = 15){
    let i=0;
     while(i < numImages){
     var tag = document.createElement("div");
     const link_name = '/movie1.html';
-    const name1 = 'https://images-na.ssl-images-amazon.com/images/S/pv-target-images/2becad2345b7214b2bfb77abd74b95089b82a4ed09e38c3ed6aa81e5af47973b._RI_V_TTW_.jpg';
+    const date1 = getRandomInt(1, 100);
+    const date2 = getRandomInt(1, 10);
+    const name1 = random_item(pics);
+    console.log(name1);
     tag.className = 'gallery';
     tag.innerHTML = `<a href="${link_name}">
-    <img src="${name1}" alt="Forest" width="600" height="400">
+    <img src="${name1}" alt="failed" width="600" height="400">
   </a>
-  <div class="desc">Add a description of the image here</div>
+  <div class="desc">channel<br>${date1}k views<br>${date2} years ago</div>
 </div>`;
     container.appendChild(tag);
     i++;
@@ -361,5 +385,6 @@ function closeNav() {
 
 </body>
 </html>
+
 
 
